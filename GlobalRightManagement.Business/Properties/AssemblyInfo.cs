@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GlobalRightManagement.Business")]
+[assembly: AssemblyProduct("GlobalRightManager.Business")]
 [assembly: AssemblyCopyright("Copyright © Robert Broomandan 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

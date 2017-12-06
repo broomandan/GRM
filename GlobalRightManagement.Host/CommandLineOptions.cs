@@ -4,7 +4,7 @@ using CommandLine.Text;
 
 namespace GlobalRightManagement.Host
 {
-    class CommandLineOptions
+    internal class CommandLineOptions
     {
         [Option('p', "DeliveryPartnerName", Required = true, HelpText = "Delivery Partner Name to be looked up.")]
         public string DeliveryPartnerName { get; set; }

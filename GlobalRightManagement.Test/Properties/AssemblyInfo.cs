@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GlobalRightManagement.Test")]
+[assembly: AssemblyTitle("GlobalRightManager.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GlobalRightManagement.Test")]
+[assembly: AssemblyProduct("GlobalRightManager.Test")]
 [assembly: AssemblyCopyright("Copyright © Robert Broomandan 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

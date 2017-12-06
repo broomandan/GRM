@@ -84,5 +84,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalRightManagement.Business\GlobalRightManagement.Business.csproj">
+      <Project>{24466B68-79D1-4B57-9DAC-124D5CED098B}</Project>
+      <Name>GlobalRightManagement.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalRightManagement.DataAccess\GlobalRightManagement.DataAccess.csproj">
+      <Project>{A5E709A2-5A43-4B06-B27D-032CA0152B8B}</Project>
+      <Name>GlobalRightManagement.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

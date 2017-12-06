@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace GlobalRightManagement.DataAccess
 {
-    internal class FileToObjectMapper<T> where T : IDesrializeFromText<T>, new()
+    internal class FileToObjectMapper<T> : IFileToObjectMapper<T> where T : IDesrializeFromText<T>, new()
     {
-        private char _delimiter;
+        private readonly char _delimiter;
 
-        public FileToObjectMapper(char delimiter1)
+        public FileToObjectMapper(char delimiter)
         {
-            _delimiter = delimiter1;
+            _delimiter = delimiter;
         }
 
         public IList<T> Read(string fileFullName, bool includesHeader)

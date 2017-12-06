@@ -41,13 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlobalRightManagement.cs" />
-    <Compile Include="IGlobalRightManagement.cs" />
+    <Compile Include="GlobalRightManager.cs" />
+    <Compile Include="IGlobalRightManager.cs" />
+    <Compile Include="ObjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GlobalRightManagement.DataAccess\GlobalRightManagement.DataAccess.csproj">
-      <Project>{A5E709A2-5A43-4B06-B27D-032CA0152B8B}</Project>
+      <Project>{a5e709a2-5a43-4b06-b27d-032ca0152b8b}</Project>
       <Name>GlobalRightManagement.DataAccess</Name>
     </ProjectReference>
   </ItemGroup>

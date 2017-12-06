@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using GlobalRightManagement.DataAccess;
+using GlobalRightManagement.DataAccess.Domain;
 
 namespace GlobalRightManagement.Business
 {
-    public interface IGlobalRightManagement
+    public interface IGlobalRightManager
     {
         IEnumerable<MusicContract> GetActiveMusicContracts(string deliveryPartnerName, DateTime effecDateTime);
     }

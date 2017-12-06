@@ -1,5 +1,6 @@
 ﻿using System;
 using CommandLine;
+using GlobalRightManagement.Business;
 
 namespace GlobalRightManagement.Host
 {
@@ -13,23 +14,28 @@ namespace GlobalRightManagement.Host
                 if (Parser.Default.ParseArguments(args, options))
                 {
                     Console.WriteLine(
-                        $"Active applicable contracts for delivery partner: {options.DeliveryPartnerName} for effective date of: {options.EffectiveDdate.ToShortDateString()}");
+                        $"Active applicable contracts for:\n\r Partner Name: {options.DeliveryPartnerName} \r\n Effective date: {options.EffectiveDdate.ToShortDateString()}\r\n");
 
-                    Console.WriteLine("List of active contracts");
+                    var globalRightManagement = ObjectFactory.CreateGlobalRightManagement();
+                    var activeMusicContracts =
+                        globalRightManagement.GetActiveMusicContracts(options.DeliveryPartnerName,
+                            options.EffectiveDdate);
 
-
+                    foreach (var contract in activeMusicContracts)
+                    {
+                        Console.WriteLine(contract.ToString());
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("Please provide correct input as described above.");
+                    Console.WriteLine("\r\nPlease provide correct input as described above.");
                 }
-                
             }
             catch (Exception e)
             {
                 Console.Error.WriteLine(e.Message);
             }
-            Console.WriteLine("Press Enter to exit.");
+            Console.WriteLine("\r\nPress Enter to exit.");
             Console.ReadLine();
         }
     }

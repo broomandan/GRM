@@ -41,13 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContractsDataAccess.cs" />
-    <Compile Include="DistributionPartnerContract.cs" />
+    <Compile Include="DistributionPartnerDataAccess.cs" />
+    <Compile Include="Domain\DistributionPartnerContract.cs" />
+    <Compile Include="Domain\MusicContract.cs" />
     <Compile Include="FileToObjectMapper.cs" />
-    <Compile Include="IContractsDataAccess.cs" />
+    <Compile Include="IDistributionPartnerDataAccess.cs" />
     <Compile Include="IDesrializeFromText.cs" />
-    <Compile Include="MusicContract.cs" />
+    <Compile Include="IFileToObjectMapper.cs" />
+    <Compile Include="IRecordLabelDataAccess.cs" />
+    <Compile Include="ObjectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordLabelDataAccess.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

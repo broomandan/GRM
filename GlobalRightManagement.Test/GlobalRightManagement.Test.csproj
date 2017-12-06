@@ -51,10 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContractsDataAccessTests.cs" />
-    <Compile Include="FileToObjectMapperTests.cs" />
+    <Compile Include="DistributionPartnerDataAccessUnitTests.cs" />
+    <Compile Include="FileToObjectMapperIntegrationTests.cs" />
+    <Compile Include="GlobalRightManagerAcceptanceTests.cs" />
     <Compile Include="GlobalRightManagementUnitTests.cs" />
+    <Compile Include="Mother.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordLabelDataAccessUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

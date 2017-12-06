@@ -1,7 +1,5 @@
-﻿namespace GlobalRightManagement.DataAccess
+﻿namespace GlobalRightManagement.DataAccess.Domain
 {
-    //Assumption: Each partner is only in contract with one and only one usage 
-
     public class DistributionPartnerContract : IDesrializeFromText<DistributionPartnerContract>
     {
         public string PartnerName { get; set; }
@@ -12,8 +10,8 @@
             var fields = line.Split(delimeter);
             var contract = new DistributionPartnerContract
             {
-                PartnerName = fields[0],
-                Usage = fields[1]
+                PartnerName = fields[0].Trim(),
+                Usage = fields[1].Trim()
             };
 
             return contract;

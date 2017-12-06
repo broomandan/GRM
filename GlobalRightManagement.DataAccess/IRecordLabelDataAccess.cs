@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using GlobalRightManagement.DataAccess.Domain;
 
 namespace GlobalRightManagement.DataAccess
 {
-    public interface IContractsDataAccess
+    public interface IRecordLabelDataAccess
     {
-        DistributionPartnerContract GetDistributionPartnerContract(string partnerName);
         IEnumerable<MusicContract> GetMusicContracts(string usage);
     }
 }
