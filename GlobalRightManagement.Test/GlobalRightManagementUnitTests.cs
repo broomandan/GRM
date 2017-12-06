@@ -7,6 +7,7 @@ using NUnit.Framework;
 
 namespace GlobalRightManagement.Test
 {
+    [TestFixture]
     public class GlobalRightManagementUnitTests
     {
         private Mock<IContractsDataAccess> _contractsDataAccess;
@@ -30,9 +31,18 @@ namespace GlobalRightManagement.Test
         }
 
         [Test]
-        public void GivenAPartnerNameAndEffectiveDateWhenNoResultWasFoundItShouldReturnAnEmptyListOfMusicContracts()
+        public void ShouldReturnAnEmptyListOfMusicContractsGivenAPartnerNameAndEffectiveDateWhenNoResultWasFoundIt()
         {
             var actual = _sut.GetActiveMusicContracts(It.IsAny<string>(), It.IsAny<DateTime>());
+
+            Assert.That(actual, Is.Not.Null);
+            Assert.That(actual, Is.Empty);
+        }
+
+        [Test]
+        public void ShouldReturnAnEmptyListOfMusicContractsGivenAnEmptyPartnerNameAndAValidEffectiveDateIt()
+        {
+            var actual = _sut.GetActiveMusicContracts(string.Empty, DateTime.Now);
 
             Assert.That(actual, Is.Not.Null);
             Assert.That(actual, Is.Empty);

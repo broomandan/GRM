@@ -5,6 +5,6 @@ namespace GlobalRightManagement.DataAccess
     public interface IContractsDataAccess
     {
         DistributionPartnerContract GetDistributionPartnerContract(string partnerName);
-        IEnumerable<MusicContract> GetMusicContracts(Usage usage);
+        IEnumerable<MusicContract> GetMusicContracts(string usage);
     }
 }

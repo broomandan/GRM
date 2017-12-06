@@ -15,10 +15,8 @@ namespace GlobalRightManagement.Business
 
         public IEnumerable<MusicContract> GetActiveMusicContracts(string deliveryPartnerName, DateTime effecDateTime)
         {
-            var partnerContract =
-                _contractsDataAccess
-                    .GetDistributionPartnerContract(
-                        deliveryPartnerName); //TODO: These two calls could be optimized dependeing on size of containing tables
+            //TODO: These two calls could be optimized dependeing on size of containing tables
+            var partnerContract = _contractsDataAccess.GetDistributionPartnerContract(deliveryPartnerName);
             var musicContracts = _contractsDataAccess.GetMusicContracts(partnerContract.Usage);
             return musicContracts;
         }

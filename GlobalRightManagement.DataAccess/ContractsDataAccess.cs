@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace GlobalRightManagement.DataAccess
 {
@@ -7,12 +6,12 @@ namespace GlobalRightManagement.DataAccess
     {
         public DistributionPartnerContract GetDistributionPartnerContract(string partnerName)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public IEnumerable<MusicContract> GetMusicContracts(Usage usage)
+        public IEnumerable<MusicContract> GetMusicContracts(string usage)
         {
-            throw new NotImplementedException();
+            return new List<MusicContract>();
         }
     }
 }

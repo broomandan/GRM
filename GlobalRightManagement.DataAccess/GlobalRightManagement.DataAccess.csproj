@@ -43,10 +43,20 @@
   <ItemGroup>
     <Compile Include="ContractsDataAccess.cs" />
     <Compile Include="DistributionPartnerContract.cs" />
+    <Compile Include="FileToObjectMapper.cs" />
     <Compile Include="IContractsDataAccess.cs" />
+    <Compile Include="IDesrializeFromText.cs" />
     <Compile Include="MusicContract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usage.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataFiles\DistributionPartnerContracts.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataFiles\MusicContracts.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
